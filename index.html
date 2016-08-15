@@ -19,7 +19,7 @@
   $nikotama.on(button,'click',function(event){
      $nikotama.get('https://rawgit.com/freddiefujiwara/nikotama-2016-aug-frontend/master/api/post.js',function(stat){
          if('success' === stat.status){
-         $nikotama.get('https://rawgit.com/freddiefujiwara/nikotama-2016-aug-frontend/master/api/get.js',function(res){
+         $nikotama.get('https://api.github.com/users/freddiefujiwara',function(res){
              var li =d.createElement('li');
              li.innerHTML = res.data.name;
              var ul = d.getElementById('list');
